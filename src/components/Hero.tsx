@@ -1,12 +1,36 @@
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Play, Users, ShieldCheck, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
+import heroBg from "@/src/assets/img/hero-bg2.jpg";
 
 const Hero = () => {
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0.25, 0]);
+
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section ref={sectionRef} className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      {/* Dynamic Parallax Background Image */}
+      <motion.div 
+        style={{ y, opacity }}
+        className="absolute inset-0 z-0 pointer-events-none"
+      >
+        <img 
+          src={heroBg} 
+          alt="" 
+          className="w-full h-full object-cover grayscale mix-blend-multiply opacity-80"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/10 to-background z-10" />
+      </motion.div>
+
       {/* Background Elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/20 rounded-full blur-[140px] animate-pulse-slow" />

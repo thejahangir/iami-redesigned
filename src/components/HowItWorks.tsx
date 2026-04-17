@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, UserPlus, Calendar, FileText, Award, ArrowRight } from "lucide-react";
+import { CheckCircle2, UserPlus, Calendar, FileText, Award, ArrowRight, Building2, UserCheck, GraduationCap } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = {
@@ -70,25 +70,34 @@ const HowItWorks = () => {
         </div>
 
         <Tabs defaultValue="employers" className="w-full">
-          <div className="flex justify-center mb-16">
-            <TabsList className="bg-white/50 backdrop-blur-md border border-white/40 p-1.5 h-16 rounded-[2rem] shadow-xl">
+          <div className="flex justify-center mb-24 px-4">
+            <TabsList className="bg-white/40 backdrop-blur-3xl border border-white/60 p-3 h-32 rounded-[4rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] w-full max-w-5xl flex items-stretch">
               <TabsTrigger 
                 value="employers" 
-                className="rounded-2xl px-10 text-lg font-bold data-[state=active]:bg-blue-600 data-[state=active]:text-white transition-all"
+                className="flex-1 rounded-[2.5rem] px-4 lg:px-12 text-base lg:text-xl font-black flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-4 !data-active:bg-blue-600 !data-active:text-white data-active:shadow-2xl data-active:shadow-blue-600/40 transition-all duration-500 group relative overflow-hidden"
               >
-                Employers
+                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-2 lg:gap-4">
+                  <Building2 className="w-6 h-6 lg:w-8 lg:h-8 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="tracking-tight">Employers</span>
+                </div>
               </TabsTrigger>
               <TabsTrigger 
                 value="interviewers" 
-                className="rounded-2xl px-10 text-lg font-bold data-[state=active]:bg-amber-600 data-[state=active]:text-white transition-all"
+                className="flex-1 rounded-[2.5rem] px-4 lg:px-12 text-base lg:text-xl font-black flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-4 !data-active:bg-amber-600 !data-active:text-white data-active:shadow-2xl data-active:shadow-amber-600/40 transition-all duration-500 group relative overflow-hidden"
               >
-                Interviewers
+                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-2 lg:gap-4">
+                  <UserCheck className="w-6 h-6 lg:w-8 lg:h-8 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="tracking-tight">Interviewers</span>
+                </div>
               </TabsTrigger>
               <TabsTrigger 
                 value="candidates" 
-                className="rounded-2xl px-10 text-lg font-bold data-[state=active]:bg-emerald-600 data-[state=active]:text-white transition-all"
+                className="flex-1 rounded-[2.5rem] px-4 lg:px-12 text-base lg:text-xl font-black flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-4 !data-active:bg-emerald-600 !data-active:text-white data-active:shadow-2xl data-active:shadow-emerald-600/40 transition-all duration-500 group relative overflow-hidden"
               >
-                Candidates
+                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-2 lg:gap-4">
+                  <GraduationCap className="w-6 h-6 lg:w-8 lg:h-8 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="tracking-tight">Candidates</span>
+                </div>
               </TabsTrigger>
             </TabsList>
           </div>

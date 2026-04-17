@@ -73,33 +73,33 @@ const HowItWorks = () => {
         </div>
 
         <Tabs defaultValue="employers" className="w-full">
-          <div className="flex justify-center mb-24 px-4">
-            <TabsList className="bg-white/40 backdrop-blur-3xl border border-white/60 p-3 !h-32 rounded-[4rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] w-full max-w-5xl flex items-stretch">
+          <div className="flex justify-center mb-16 px-4">
+            <TabsList className="bg-white/40 backdrop-blur-3xl border border-white/60 p-1.5 !h-18 rounded-full shadow-[0_20px_40px_-12px_rgba(0,0,0,0.08)] w-full max-w-3xl flex items-stretch">
               <TabsTrigger 
                 value="employers" 
-                className="flex-1 rounded-[2.5rem] px-4 lg:px-12 text-base lg:text-xl font-black flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-4 !data-active:bg-blue-600 !data-active:text-white data-active:shadow-2xl data-active:shadow-blue-600/40 transition-all duration-500 group relative overflow-hidden"
+                className="flex-1 rounded-full px-4 lg:px-8 text-sm lg:text-base font-bold flex items-center justify-center gap-2 lg:gap-3 !data-active:bg-blue-600 !data-active:text-white data-active:shadow-lg data-active:shadow-blue-600/30 transition-all duration-300 group relative overflow-hidden"
               >
-                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-2 lg:gap-4">
-                  <Building2 className="w-6 h-6 lg:w-8 lg:h-8 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="tracking-tight">Employers</span>
+                <div className="relative z-10 flex items-center gap-2 lg:gap-3">
+                  <Building2 className="w-5 h-5 lg:w-5.5 lg:h-5.5 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="tracking-tight uppercase text-[10px] lg:text-xs tracking-widest font-black">Employers</span>
                 </div>
               </TabsTrigger>
               <TabsTrigger 
                 value="interviewers" 
-                className="flex-1 rounded-[2.5rem] px-4 lg:px-12 text-base lg:text-xl font-black flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-4 !data-active:bg-amber-600 !data-active:text-white data-active:shadow-2xl data-active:shadow-amber-600/40 transition-all duration-500 group relative overflow-hidden"
+                className="flex-1 rounded-full px-4 lg:px-8 text-sm lg:text-base font-bold flex items-center justify-center gap-2 lg:gap-3 !data-active:bg-amber-600 !data-active:text-white data-active:shadow-lg data-active:shadow-amber-600/30 transition-all duration-300 group relative overflow-hidden"
               >
-                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-2 lg:gap-4">
-                  <UserCheck className="w-6 h-6 lg:w-8 lg:h-8 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="tracking-tight">Interviewers</span>
+                <div className="relative z-10 flex items-center gap-2 lg:gap-3">
+                  <UserCheck className="w-5 h-5 lg:w-5.5 lg:h-5.5 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="tracking-tight uppercase text-[10px] lg:text-xs tracking-widest font-black">Interviewers</span>
                 </div>
               </TabsTrigger>
               <TabsTrigger 
                 value="candidates" 
-                className="flex-1 rounded-[2.5rem] px-4 lg:px-12 text-base lg:text-xl font-black flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-4 !data-active:bg-emerald-600 !data-active:text-white data-active:shadow-2xl data-active:shadow-emerald-600/40 transition-all duration-500 group relative overflow-hidden"
+                className="flex-1 rounded-full px-4 lg:px-8 text-sm lg:text-base font-bold flex items-center justify-center gap-2 lg:gap-3 !data-active:bg-emerald-600 !data-active:text-white data-active:shadow-lg data-active:shadow-emerald-600/30 transition-all duration-300 group relative overflow-hidden"
               >
-                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-2 lg:gap-4">
-                  <GraduationCap className="w-6 h-6 lg:w-8 lg:h-8 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="tracking-tight">Candidates</span>
+                <div className="relative z-10 flex items-center gap-2 lg:gap-3">
+                  <GraduationCap className="w-5 h-5 lg:w-5.5 lg:h-5.5 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="tracking-tight uppercase text-[10px] lg:text-xs tracking-widest font-black">Candidates</span>
                 </div>
               </TabsTrigger>
             </TabsList>

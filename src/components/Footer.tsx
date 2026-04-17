@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Facebook, Twitter, Linkedin, Instagram, Github, Mail, Phone, MapPin } from "lucide-react";
-import logo from "../assets/ing/Logo-IAmInterviewed-Trans.png";
+import logo from "../assets/img/Logo-IAmInterviewed-Trans.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
-import logo from "../assets/ing/Logo-IAmInterviewed-Trans.png";
+import logo from "../assets/img/Logo-IAmInterviewed-Trans.png";
 import { 
   NavigationMenu, 
   NavigationMenuContent, 

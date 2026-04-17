@@ -32,6 +32,7 @@ const HowItWorks = () => {
       lightBg: "bg-blue-500/10",
       border: "border-blue-500/20",
       glow: "shadow-blue-500/20",
+      cardBg: "bg-blue-50/50",
     },
     interviewers: {
       primary: "text-amber-600",
@@ -39,6 +40,7 @@ const HowItWorks = () => {
       lightBg: "bg-amber-500/10",
       border: "border-amber-500/20",
       glow: "shadow-amber-500/20",
+      cardBg: "bg-amber-50/50",
     },
     candidates: {
       primary: "text-emerald-600",
@@ -46,6 +48,7 @@ const HowItWorks = () => {
       lightBg: "bg-emerald-500/10",
       border: "border-emerald-500/20",
       glow: "shadow-emerald-500/20",
+      cardBg: "bg-emerald-50/50",
     },
   };
 
@@ -71,7 +74,7 @@ const HowItWorks = () => {
 
         <Tabs defaultValue="employers" className="w-full">
           <div className="flex justify-center mb-24 px-4">
-            <TabsList className="bg-white/40 backdrop-blur-3xl border border-white/60 p-3 h-32 rounded-[4rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] w-full max-w-5xl flex items-stretch">
+            <TabsList className="bg-white/40 backdrop-blur-3xl border border-white/60 p-3 !h-32 rounded-[4rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] w-full max-w-5xl flex items-stretch">
               <TabsTrigger 
                 value="employers" 
                 className="flex-1 rounded-[2.5rem] px-4 lg:px-12 text-base lg:text-xl font-black flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-4 !data-active:bg-blue-600 !data-active:text-white data-active:shadow-2xl data-active:shadow-blue-600/40 transition-all duration-500 group relative overflow-hidden"
@@ -115,7 +118,7 @@ const HowItWorks = () => {
                     transition={{ delay: index * 0.1, duration: 0.4 }}
                     className="relative group"
                   >
-                    <Card className={`h-full border-2 border-white/40 bg-white/40 backdrop-blur-md shadow-xl transition-all duration-300 rounded-[2.5rem] overflow-hidden hover:shadow-2xl ${colorMap[key].glow}`}>
+                    <Card className={`h-full border-2 border-white/60 backdrop-blur-md shadow-xl transition-all duration-300 rounded-[2.5rem] overflow-hidden hover:shadow-2xl ${colorMap[key].cardBg} ${colorMap[key].glow}`}>
                       <CardContent className="pt-12 pb-10 px-8 text-center flex flex-col items-center">
                         <div className={`w-18 h-18 rounded-2xl flex items-center justify-center mb-8 shadow-inner transition-transform group-hover:rotate-6 ${colorMap[key].lightBg} ${colorMap[key].primary}`}>
                           <step.icon className="w-9 h-9" />

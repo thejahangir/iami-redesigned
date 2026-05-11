@@ -98,7 +98,7 @@ const UserSegments = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="p-8 bg-black/5 flex flex-col items-center">
-                  <Button className="w-full h-14 text-lg font-black group shadow-xl hover:shadow-none transition-all rounded-2xl">
+                  <Button className="w-full h-14 text-lg font-black group shadow-xl hover:shadow-none transition-all rounded-2xl bg-[#4F7DBE] hover:bg-[#4F7DBE]/90 text-white">
                     {segment.cta}
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </Button>

@@ -82,7 +82,7 @@ const Navbar = () => {
 
               <div className="flex items-center gap-2">
                 <Button variant="ghost" className="font-bold hover:bg-primary/5 px-5 h-10 rounded-xl">Log in</Button>
-                <Button className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 px-6 h-10 rounded-xl font-black tracking-tight group">
+                <Button className="bg-[#4F7DBE] hover:bg-[#4F7DBE]/90 text-white shadow-lg shadow-[#4F7DBE]/20 px-6 h-10 rounded-xl font-black tracking-tight group">
                   Get Started
                   <ChevronRight className="ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -118,7 +118,7 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col gap-3 mt-6">
               <Button variant="outline" className="w-full h-12 justify-center font-bold rounded-xl">Log in</Button>
-              <Button className="w-full h-12 justify-center bg-primary text-white font-black rounded-xl shadow-lg shadow-primary/20">Get Started</Button>
+              <Button className="w-full h-12 justify-center bg-[#4F7DBE] text-white hover:bg-[#4F7DBE]/90 font-black rounded-xl shadow-lg shadow-[#4F7DBE]/20">Get Started</Button>
             </div>
           </motion.div>
         )}

@@ -27,28 +27,28 @@ const HowItWorks = () => {
 
   const colorMap = {
     employers: {
-      primary: "text-blue-600",
-      bg: "bg-blue-600",
-      lightBg: "bg-blue-500/10",
-      border: "border-blue-500/20",
-      glow: "shadow-blue-500/20",
-      cardBg: "bg-blue-50/50",
+      primary: "text-[#4F7DBE]",
+      bg: "bg-[#4F7DBE]",
+      lightBg: "bg-[#4F7DBE]/10",
+      border: "border-[#4F7DBE]/20",
+      glow: "shadow-[#4F7DBE]/20",
+      cardBg: "bg-[#4F7DBE]/5",
     },
     interviewers: {
-      primary: "text-amber-600",
-      bg: "bg-amber-600",
-      lightBg: "bg-amber-500/10",
-      border: "border-amber-500/20",
-      glow: "shadow-amber-500/20",
-      cardBg: "bg-amber-50/50",
+      primary: "text-[#F5BF3E]",
+      bg: "bg-[#F5BF3E]",
+      lightBg: "bg-[#F5BF3E]/10",
+      border: "border-[#F5BF3E]/20",
+      glow: "shadow-[#F5BF3E]/20",
+      cardBg: "bg-[#F5BF3E]/5",
     },
     candidates: {
-      primary: "text-emerald-600",
-      bg: "bg-emerald-600",
-      lightBg: "bg-emerald-500/10",
-      border: "border-emerald-500/20",
-      glow: "shadow-emerald-500/20",
-      cardBg: "bg-emerald-50/50",
+      primary: "text-[#10B981]",
+      bg: "bg-[#10B981]",
+      lightBg: "bg-[#10B981]/10",
+      border: "border-[#10B981]/20",
+      glow: "shadow-[#10B981]/20",
+      cardBg: "bg-[#10B981]/5",
     },
   };
 
@@ -77,7 +77,7 @@ const HowItWorks = () => {
             <TabsList className="bg-white/40 backdrop-blur-3xl border border-white/60 p-1.5 !h-18 rounded-full shadow-[0_20px_40px_-12px_rgba(0,0,0,0.08)] w-full max-w-3xl flex items-stretch">
               <TabsTrigger 
                 value="employers" 
-                className="flex-1 rounded-full px-4 lg:px-8 text-sm lg:text-base font-bold flex items-center justify-center gap-2 lg:gap-3 !data-active:bg-blue-600 !data-active:text-white data-active:shadow-lg data-active:shadow-blue-600/30 transition-all duration-300 group relative overflow-hidden"
+                className="flex-1 rounded-full px-4 lg:px-8 text-sm lg:text-base font-bold flex items-center justify-center gap-2 lg:gap-3 !data-active:bg-[#4F7DBE] !data-active:text-white data-active:shadow-lg data-active:shadow-[#4F7DBE]/30 transition-all duration-300 group relative overflow-hidden"
               >
                 <div className="relative z-10 flex items-center gap-2 lg:gap-3">
                   <Building2 className="w-5 h-5 lg:w-5.5 lg:h-5.5 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
@@ -86,7 +86,7 @@ const HowItWorks = () => {
               </TabsTrigger>
               <TabsTrigger 
                 value="interviewers" 
-                className="flex-1 rounded-full px-4 lg:px-8 text-sm lg:text-base font-bold flex items-center justify-center gap-2 lg:gap-3 !data-active:bg-amber-600 !data-active:text-white data-active:shadow-lg data-active:shadow-amber-600/30 transition-all duration-300 group relative overflow-hidden"
+                className="flex-1 rounded-full px-4 lg:px-8 text-sm lg:text-base font-bold flex items-center justify-center gap-2 lg:gap-3 !data-active:bg-[#F5BF3E] !data-active:text-white data-active:shadow-lg data-active:shadow-[#F5BF3E]/30 transition-all duration-300 group relative overflow-hidden"
               >
                 <div className="relative z-10 flex items-center gap-2 lg:gap-3">
                   <UserCheck className="w-5 h-5 lg:w-5.5 lg:h-5.5 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
@@ -95,7 +95,7 @@ const HowItWorks = () => {
               </TabsTrigger>
               <TabsTrigger 
                 value="candidates" 
-                className="flex-1 rounded-full px-4 lg:px-8 text-sm lg:text-base font-bold flex items-center justify-center gap-2 lg:gap-3 !data-active:bg-emerald-600 !data-active:text-white data-active:shadow-lg data-active:shadow-emerald-600/30 transition-all duration-300 group relative overflow-hidden"
+                className="flex-1 rounded-full px-4 lg:px-8 text-sm lg:text-base font-bold flex items-center justify-center gap-2 lg:gap-3 !data-active:bg-[#10B981] !data-active:text-white data-active:shadow-lg data-active:shadow-[#10B981]/30 transition-all duration-300 group relative overflow-hidden"
               >
                 <div className="relative z-10 flex items-center gap-2 lg:gap-3">
                   <GraduationCap className="w-5 h-5 lg:w-5.5 lg:h-5.5 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />
@@ -123,7 +123,7 @@ const HowItWorks = () => {
                         <div className={`w-18 h-18 rounded-2xl flex items-center justify-center mb-8 shadow-inner transition-transform group-hover:rotate-6 ${colorMap[key].lightBg} ${colorMap[key].primary}`}>
                           <step.icon className="w-9 h-9" />
                         </div>
-                        <h3 className="text-2xl font-bold mb-4 font-heading group-hover:text-primary transition-colors leading-tight">{step.title}</h3>
+                        <h3 className="text-2xl font-bold mb-4 font-heading group-hover:text-[#4F7DBE] transition-colors leading-tight">{step.title}</h3>
                         <p className="text-muted-foreground text-sm font-medium leading-relaxed opacity-80">
                           {step.desc}
                         </p>

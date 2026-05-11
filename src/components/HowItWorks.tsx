@@ -43,12 +43,12 @@ const HowItWorks = () => {
       cardBg: "bg-[#F5BF3E]/5",
     },
     candidates: {
-      primary: "text-[#10B981]",
-      bg: "bg-[#10B981]",
-      lightBg: "bg-[#10B981]/10",
-      border: "border-[#10B981]/20",
-      glow: "shadow-[#10B981]/20",
-      cardBg: "bg-[#10B981]/5",
+      primary: "text-[#8B5CF6]",
+      bg: "bg-[#8B5CF6]",
+      lightBg: "bg-[#8B5CF6]/10",
+      border: "border-[#8B5CF6]/20",
+      glow: "shadow-[#8B5CF6]/20",
+      cardBg: "bg-[#8B5CF6]/5",
     },
   };
 
@@ -95,7 +95,7 @@ const HowItWorks = () => {
               </TabsTrigger>
               <TabsTrigger 
                 value="candidates" 
-                className="flex-1 rounded-full px-4 lg:px-8 text-sm lg:text-base font-bold flex items-center justify-center gap-2 lg:gap-3 !data-active:bg-[#10B981] !data-active:text-white data-active:shadow-lg data-active:shadow-[#10B981]/30 transition-all duration-300 group relative overflow-hidden"
+                className="flex-1 rounded-full px-4 lg:px-8 text-sm lg:text-base font-bold flex items-center justify-center gap-2 lg:gap-3 !data-active:bg-[#8B5CF6] !data-active:text-white data-active:shadow-lg data-active:shadow-[#8B5CF6]/30 transition-all duration-300 group relative overflow-hidden"
               >
                 <div className="relative z-10 flex items-center gap-2 lg:gap-3">
                   <GraduationCap className="w-5 h-5 lg:w-5.5 lg:h-5.5 opacity-60 group-data-active:opacity-100 group-hover:scale-110 transition-transform duration-300" />

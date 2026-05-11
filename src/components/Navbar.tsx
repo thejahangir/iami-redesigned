@@ -12,27 +12,39 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronRight, Building2, Laptop, GraduationCap, ShieldCheck } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-4 left-0 right-0 z-50 px-4 pointer-events-none">
+    <nav className={cn("fixed left-0 right-0 z-50 px-4 pointer-events-none transition-all duration-500", isScrolled ? "top-2" : "top-4")}>
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="max-w-7xl mx-auto bg-white/60 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.05)] rounded-[2rem] pointer-events-auto overflow-hidden"
+        className={cn(
+          "mx-auto bg-white/60 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.05)] rounded-[2rem] pointer-events-auto overflow-hidden transition-all duration-500",
+          isScrolled ? "max-w-4xl bg-white/90 shadow-2xl" : "max-w-7xl"
+        )}
       >
         <div className="px-6 md:px-8">
-          <div className="flex justify-between items-center h-16 md:h-18">
+          <div className={cn("flex justify-between items-center transition-all duration-500", isScrolled ? "h-14" : "h-16 md:h-18")}>
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <motion.div 
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center gap-2 cursor-pointer"
               >
-                <img src={logo} alt="Logo" className="iami-logo" />
+                <img src={logo} alt="Logo" className={cn("iami-logo transition-all duration-500 origin-left", isScrolled ? "scale-75" : "scale-100")} />
               </motion.div>
             </div>
 

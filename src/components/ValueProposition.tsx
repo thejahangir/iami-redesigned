@@ -76,7 +76,7 @@ const ValueProposition = () => {
                 {[
                   { label: "10,000+ Interviews Conducted", bg: "bg-[#4F7DBE]", lightBg: "bg-[#4F7DBE]/10" },
                   { label: "98% Client Satisfaction Rate", bg: "bg-[#F5BF3E]", lightBg: "bg-[#F5BF3E]/10" },
-                  { label: "Global Expert Network", bg: "bg-[#10B981]", lightBg: "bg-[#10B981]/10" }
+                  { label: "Global Expert Network", bg: "bg-[#8B5CF6]", lightBg: "bg-[#8B5CF6]/10" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 group">
                     <div className={cn("w-10 h-10 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform", item.lightBg)}>

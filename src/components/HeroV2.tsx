@@ -95,7 +95,7 @@ const HeroV2 = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-5xl lg:text-7xl font-black tracking-tight font-heading leading-tight mb-6"
+              className="text-5xl lg:text-5xl font-black tracking-tight font-heading leading-tight mb-6"
             >
               <span className="whitespace-nowrap">Technical Interviews</span> <br />
               <span className="relative inline-block mt-2">

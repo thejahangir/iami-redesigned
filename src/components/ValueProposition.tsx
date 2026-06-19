@@ -74,13 +74,13 @@ const ValueProposition = () => {
               
               <div className="space-y-6">
                 {[
-                  { label: "10,000+ Interviews Conducted", bg: "bg-[#4F7DBE]", lightBg: "bg-[#4F7DBE]/10" },
-                  { label: "98% Client Satisfaction Rate", bg: "bg-[#F5BF3E]", lightBg: "bg-[#F5BF3E]/10" },
-                  { label: "Global Expert Network", bg: "bg-[#8B5CF6]", lightBg: "bg-[#8B5CF6]/10" }
+                  { label: "10,000+ Interviews Conducted", color: "bg-primary" },
+                  { label: "98% Client Satisfaction Rate", color: "bg-accent" },
+                  { label: "Global Expert Network", color: "bg-info" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 group">
-                    <div className={cn("w-10 h-10 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform", item.lightBg)}>
-                      <div className={cn("w-2.5 h-2.5 rounded-full", item.bg)} />
+                    <div className={cn("w-10 h-10 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform", item.color + "/10")}>
+                      <div className={cn("w-2.5 h-2.5 rounded-full", item.color)} />
                     </div>
                     <span className="font-bold text-lg">{item.label}</span>
                   </div>

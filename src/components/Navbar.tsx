@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
-import logo from "../assets/img/Logo-IAmInterviewed-Trans.png";
+import logo from "../assets/ing/Logo-IAmInterviewed-Trans.png";
 import { 
   NavigationMenu, 
   NavigationMenuContent, 
@@ -12,39 +12,29 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronRight, Building2, Laptop, GraduationCap, ShieldCheck } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const navigate = useNavigate();
 
   return (
-    <nav className={cn("fixed left-0 right-0 z-50 px-4 pointer-events-none transition-all duration-500", isScrolled ? "top-2" : "top-4")}>
+    <nav className="fixed top-4 left-0 right-0 z-50 px-4 pointer-events-none">
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className={cn(
-          "mx-auto bg-white/60 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.05)] rounded-[2rem] pointer-events-auto overflow-hidden transition-all duration-500",
-          isScrolled ? "max-w-4xl bg-white/90 shadow-2xl" : "max-w-7xl"
-        )}
+        className="max-w-7xl mx-auto bg-white/60 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.05)] rounded-[2rem] pointer-events-auto overflow-hidden"
       >
         <div className="px-6 md:px-8">
-          <div className={cn("flex justify-between items-center transition-all duration-500", isScrolled ? "h-14" : "h-16 md:h-18")}>
+          <div className="flex justify-between items-center h-16 md:h-18">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <motion.div 
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center gap-2 cursor-pointer"
               >
-                <img src={logo} alt="Logo" className={cn("iami-logo transition-all duration-500 origin-left", isScrolled ? "scale-75" : "scale-100")} />
+                <img src={logo} alt="Logo" className="iami-logo" />
               </motion.div>
             </div>
 
@@ -93,9 +83,8 @@ const Navbar = () => {
               <div className="h-6 w-px bg-border/40 mx-2" />
 
               <div className="flex items-center gap-2">
-                <Button variant="ghost" className="font-bold hover:bg-primary/5 px-5 h-10 rounded-xl">Log in</Button>
-                <Button className="bg-[#4F7DBE] hover:bg-[#4F7DBE]/90 text-white shadow-lg shadow-[#4F7DBE]/20 px-6 h-10 rounded-xl font-black tracking-tight group">
-                  Get Started
+                <Button onClick={() => navigate('/login')} className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 px-6 h-10 rounded-xl font-black tracking-tight group">
+                  Login
                   <ChevronRight className="ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
@@ -129,8 +118,9 @@ const Navbar = () => {
               <a href="#how-it-works" className="block px-4 py-3 text-lg font-bold hover:bg-primary/5 rounded-xl transition-colors">How it Works</a>
             </div>
             <div className="flex flex-col gap-3 mt-6">
-              <Button variant="outline" className="w-full h-12 justify-center font-bold rounded-xl">Log in</Button>
-              <Button className="w-full h-12 justify-center bg-[#4F7DBE] text-white hover:bg-[#4F7DBE]/90 font-black rounded-xl shadow-lg shadow-[#4F7DBE]/20">Get Started</Button>
+              <Button onClick={() => { setIsOpen(false); navigate('/login'); }} className="w-full h-12 justify-center bg-primary text-white font-black rounded-xl shadow-lg shadow-primary/20">
+                Login
+              </Button>
             </div>
           </motion.div>
         )}

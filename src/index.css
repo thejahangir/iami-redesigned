@@ -47,8 +47,9 @@
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
 
-    --color-brand-blue: #4F7DBE;
-    --color-brand-yellow: #F5BF3E;
+    --color-brand-blue: #0085F7;
+    --color-brand-green: #00A94B;
+    --color-brand-black: #000000;
 }
 
 :root {
@@ -58,36 +59,39 @@
     --card-foreground: oklch(0.12 0.01 240);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.12 0.01 240);
-    --primary: hsl(215 90% 45%); 
-    --primary-foreground: oklch(0.99 0 0);
+    --primary: #0085F7; 
+    --primary-foreground: #ffffff;
     --secondary: oklch(0.96 0.01 240);
-    --secondary-foreground: oklch(0.2 0.02 240);
+    --secondary-foreground: #000000;
     --muted: oklch(0.96 0.01 240);
     --muted-foreground: hsl(215 15% 45%); 
-    --accent: hsl(42 95% 55%); 
-    --accent-foreground: oklch(0.1 0 0); 
-    --success: hsl(142 70% 45%);
-    --info: hsl(200 80% 50%);
+    --accent: #00A94B; 
+    --accent-foreground: #ffffff; 
+    --success: #00A94B;
+    --info: #0085F7;
     --destructive: oklch(0.55 0.22 25);
     --border: oklch(0.9 0.01 240);
     --input: oklch(0.9 0.01 240);
     --ring: hsl(215 90% 45%);
-    --radius: 1.5rem;
+    --radius: 0.5rem;
 }
 
 .dark {
-    --background: oklch(0.12 0.01 240);
-    --foreground: oklch(0.99 0 0);
+    --background: #000000;
+    --foreground: #ffffff;
     --card: rgba(15, 23, 42, 0.4);
-    --card-foreground: oklch(0.99 0 0);
-    --primary: hsl(215 90% 55%);
-    --accent: hsl(42 95% 55%);
+    --card-foreground: #ffffff;
+    --primary: #0085F7;
+    --accent: #00A94B;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    }
+  }
+  button, [role="button"], a, select, input[type="submit"], input[type="button"], input[type="checkbox"], input[type="radio"] {
+    @apply cursor-pointer;
+  }
   body {
     @apply text-foreground antialiased min-h-screen;
     background: 

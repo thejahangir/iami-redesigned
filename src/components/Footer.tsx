@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Facebook, Twitter, Linkedin, Instagram, Github, Mail, Phone, MapPin } from "lucide-react";
-import logo from "../assets/img/Logo-IAmInterviewed-Trans.png";
+import logo from "../assets/ing/Logo-IAmInterviewed-Trans.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -73,19 +73,19 @@ const Footer = () => {
                 <div className="w-8 h-8 rounded-lg bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   <Mail className="w-4 h-4" />
                 </div>
-                <span className="font-bold">info@iaminterviewed.com</span>
+                <span className="font-bold">hello@iaminterviewed.com</span>
               </li>
               <li className="flex items-center gap-4 group">
                 <div className="w-8 h-8 rounded-lg bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   <Phone className="w-4 h-4" />
                 </div>
-                <span className="font-bold">+91 (999) 999-9999</span>
+                <span className="font-bold">+1 (555) 000-0000</span>
               </li>
               <li className="flex items-center gap-4 group">
                 <div className="w-8 h-8 rounded-lg bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   <MapPin className="w-4 h-4" />
                 </div>
-                <span className="font-bold">#226, 100 Ft Road, HRBR Layout, Kalyan Nagar, Bangalore - 43. India.</span>
+                <span className="font-bold">123 Tech Plaza, Silicon Valley, CA</span>
               </li>
             </ul>
           </div>
